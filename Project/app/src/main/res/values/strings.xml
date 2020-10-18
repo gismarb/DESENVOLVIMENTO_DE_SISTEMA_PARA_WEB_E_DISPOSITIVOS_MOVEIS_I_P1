@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">P1</string>
+    <string name="emial_cpf">E-mial ou CPF</string>
+    <string name="senha">Senha</string>
+    <string name="buttonAccess">Acessar o app</string>
+    <string name="buttonLogin">Acessar o app</string>
 </resources>
