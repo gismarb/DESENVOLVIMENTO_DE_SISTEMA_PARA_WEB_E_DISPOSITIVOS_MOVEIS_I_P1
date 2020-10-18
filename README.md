@@ -10,4 +10,4 @@ Aluno: Gismar Barbosa - Prova 1 - Link para respositório: *<https://github.com/
 
 Tarefa: Criar uma App conforme [Exemplo](https://framer.com/share/Prova-P1--oGXlUWVWMgiH7KID71RW) .
 
-<Continuar editando...>
+... Continuar editando ...
