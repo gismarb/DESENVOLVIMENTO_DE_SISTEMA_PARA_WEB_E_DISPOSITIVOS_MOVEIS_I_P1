@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">P1</string>
-    <string name="emial_cpf">E-mial ou CPF</string>
+    <string name="emial_cpf">E-mail ou CPF</string>
     <string name="senha">Senha</string>
     <string name="buttonAccess">Acessar o app</string>
     <string name="buttonLogin">Acessar o app</string>
+    <string name="userName">Nome: </string>
+    <string name="cpfId">CPF: </string>
+    <string name="e_mail">E-mail: </string>
+    <string name="show_details">Exibir detalhes</string>
+    <string name="back">Voltar</string>
 </resources>
