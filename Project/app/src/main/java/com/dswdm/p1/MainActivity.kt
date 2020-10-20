@@ -10,7 +10,7 @@ import android.widget.TextView
 
 
 // Mensagem de falha de Login
-const val LOGIN_FAILURE_MESSAGE = "Atenção - e-mail/CPF e/ou senha inválidos"
+const val LOGIN_FAILURE_MESSAGE = "Atenção: e-mail/CPF e/ou senha inválidos"
 //const val USER_LOGIN_DD
 
 // Instanciando a Objetos para guardar usuários cadastrados "injetados"
@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity() {
 
         val editTextPwd = findViewById<EditText>(R.id.editTextUserPwd)
         val userPwd = editTextPwd.text.toString()
+
+//        Pensar em um limitador para os erros
+//        val editTextFail = findViewById<TextView>(R.id.textViewErrorLogin)
+//        editTextFail.append(LOGIN_FAILURE_MESSAGE)
+
 
         if (userPwd.equals(user1.pwd) and userId.equals(user1.email) or userId.equals(user1.CPF)) {
             val intent = Intent(this, DataFormActivity::class.java)
