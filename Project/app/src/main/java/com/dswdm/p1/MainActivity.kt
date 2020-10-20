@@ -3,24 +3,12 @@ package com.dswdm.p1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Display
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import java.util.concurrent.DelayQueue
-
 
 // Mensagem de falha de Login
 const val LOGIN_FAILURE_MESSAGE = "Atenção: e-mail/CPF e/ou senha inválidos"
-//const val USER_LOGIN_DD
-
-// Instanciando a Objetos para guardar usuários cadastrados "injetados"
-val user1 = User("Gismar Barbosa", "111111111-22", "gismar@gismar.com", "g1sm@r" )
-
-// TODO: Pensar em uma forma de utilizar uma Lista, para alocar mais usuários (futuro)
-//val user2 = User("Ricardo Severiano Motta", "111111110-20", "ricardo@best.com.br", "r1c@rd0" )
-//val user3 = User("Marta Helena Richaauskka", "81111111-99", "mhrichaauskka@idle.com", "m@rt@H" )
-//val users = listOf<User>(user1, user2, user3)
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,20 +31,20 @@ class MainActivity : AppCompatActivity() {
         val userPwd = editTextPwd.text.toString()
 
         // Campo: (mensagem de erro, opcional, caso repasse dados errados)
-        val editTextFail = findViewById<TextView>(R.id.textViewErrorLogin)
+        val textViewFail = findViewById<TextView>(R.id.textViewErrorLogin)
 
         // Mecanismo de validação de usuários
         if (userPwd.equals(user1.pwd) and userId.equals(user1.email) or userId.equals(user1.CPF)) {
             val intent = Intent(this, DataFormActivity::class.java)
 
             // Limpando campo de erro, em caso de sucesso do Login
-            editTextFail.setText("")
+            textViewFail.setText("")
 
             // Carregando a outra view (activity_dataform.xml)
             startActivity(intent)
         } else {
             // Caso esteja com crendencias incorretas, carrega mensagem de erro
-            editTextFail.setText(LOGIN_FAILURE_MESSAGE)
+            textViewFail.setText(LOGIN_FAILURE_MESSAGE)
         }
 
         // Limapando dados dos campos (credenciais)
